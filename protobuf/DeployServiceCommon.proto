@@ -189,7 +189,14 @@ message DeployInfoWithEventData{
   repeated SingleReport report =2;
 }
 
+message SystemDeployInfoWithEventData{
+  SystemDeployDataProto systemDeploy = 1;
+  repeated SingleReport report =2;
+}
+
 message BlockEventInfo{
   LightBlockInfo blockInfo = 1;
   repeated DeployInfoWithEventData deploys= 2;
+  repeated SystemDeployInfoWithEventData systemDeploys = 3;
+  bytes postStateHash = 4;
 }
