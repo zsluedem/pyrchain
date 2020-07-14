@@ -100,6 +100,16 @@ class DeployServiceStub(object):
         request_serializer=DeployServiceCommon__pb2.BlockQuery.SerializeToString,
         response_deserializer=DeployServiceV1__pb2.EventInfoResponse.FromString,
         )
+    self.getDataAtChannel = channel.unary_unary(
+        '/casper.v1.DeployService/getDataAtChannel',
+        request_serializer=DeployServiceCommon__pb2.DataAtChannelQuery.SerializeToString,
+        response_deserializer=DeployServiceV1__pb2.DatasAtChannelResponse.FromString,
+        )
+    self.getContinuationAtChannel = channel.unary_unary(
+        '/casper.v1.DeployService/getContinuationAtChannel',
+        request_serializer=DeployServiceCommon__pb2.ContinuationAtChannelsQuery.SerializeToString,
+        response_deserializer=DeployServiceV1__pb2.ContinuationsAtChannelsResponse.FromString,
+        )
 
 
 class DeployServiceServicer(object):
@@ -223,6 +233,20 @@ class DeployServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def getDataAtChannel(self, request, context):
+    """get data from par
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def getContinuationAtChannel(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_DeployServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -305,6 +329,16 @@ def add_DeployServiceServicer_to_server(servicer, server):
           servicer.getEventByHash,
           request_deserializer=DeployServiceCommon__pb2.BlockQuery.FromString,
           response_serializer=DeployServiceV1__pb2.EventInfoResponse.SerializeToString,
+      ),
+      'getDataAtChannel': grpc.unary_unary_rpc_method_handler(
+          servicer.getDataAtChannel,
+          request_deserializer=DeployServiceCommon__pb2.DataAtChannelQuery.FromString,
+          response_serializer=DeployServiceV1__pb2.DatasAtChannelResponse.SerializeToString,
+      ),
+      'getContinuationAtChannel': grpc.unary_unary_rpc_method_handler(
+          servicer.getContinuationAtChannel,
+          request_deserializer=DeployServiceCommon__pb2.ContinuationAtChannelsQuery.FromString,
+          response_serializer=DeployServiceV1__pb2.ContinuationsAtChannelsResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

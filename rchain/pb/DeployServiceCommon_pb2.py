@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='casper',
   syntax='proto3',
   serialized_options=b'\342?@\n\033coop.rchain.casper.protocol\020\001\"\035sealed trait ReportEventProto(\001',
-  serialized_pb=b'\n\x19\x44\x65ployServiceCommon.proto\x12\x06\x63\x61sper\x1a\x13\x43\x61sperMessage.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x15scalapb/scalapb.proto\x1a\x0eRhoTypes.proto\"#\n\x0f\x46indDeployQuery\x12\x10\n\x08\x64\x65ployId\x18\x01 \x01(\x0c\"\x1a\n\nBlockQuery\x12\x0c\n\x04hash\x18\x01 \x01(\t\"\x1c\n\x0b\x42locksQuery\x12\r\n\x05\x64\x65pth\x18\x01 \x01(\x05\"G\n\x13\x42locksQueryByHeight\x12\x18\n\x10startBlockNumber\x18\x01 \x01(\x03\x12\x16\n\x0e\x65ndBlockNumber\x18\x02 \x01(\x03\"4\n\x0f\x44\x61taAtNameQuery\x12\r\n\x05\x64\x65pth\x18\x01 \x01(\x05\x12\x12\n\x04name\x18\x02 \x01(\x0b\x32\x04.Par\"=\n\x17\x43ontinuationAtNameQuery\x12\r\n\x05\x64\x65pth\x18\x01 \x01(\x05\x12\x13\n\x05names\x18\x02 \x03(\x0b\x32\x04.Par\"\\\n\x11VisualizeDagQuery\x12\r\n\x05\x64\x65pth\x18\x01 \x01(\x05\x12\x1e\n\x16showJustificationLines\x18\x02 \x01(\x08\x12\x18\n\x10startBlockNumber\x18\x03 \x01(\x05\"\x14\n\x12MachineVerifyQuery\"K\n\x17PrivateNamePreviewQuery\x12\x0c\n\x04user\x18\x01 \x01(\x0c\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x0f\n\x07nameQty\x18\x03 \x01(\x05\"\x19\n\x17LastFinalizedBlockQuery\" \n\x10IsFinalizedQuery\x12\x0c\n\x04hash\x18\x01 \x01(\t\"$\n\x0f\x42ondStatusQuery\x12\x11\n\tpublicKey\x18\x01 \x01(\x0c\"R\n\x16\x45xploratoryDeployQuery\x12\x0c\n\x04term\x18\x01 \x01(\t\x12\x11\n\tblockHash\x18\x02 \x01(\t\x12\x17\n\x0fusePreStateHash\x18\x03 \x01(\x08\",\n\x08\x42ondInfo\x12\x11\n\tvalidator\x18\x01 \x01(\t\x12\r\n\x05stake\x18\x02 \x01(\x03\"?\n\x11JustificationInfo\x12\x11\n\tvalidator\x18\x01 \x01(\t\x12\x17\n\x0flatestBlockHash\x18\x02 \x01(\t\"\xe1\x01\n\nDeployInfo\x12\x10\n\x08\x64\x65ployer\x18\x01 \x01(\t\x12\x0c\n\x04term\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\x03\x12\x0b\n\x03sig\x18\x04 \x01(\t\x12\x14\n\x0csigAlgorithm\x18\x05 \x01(\t\x12\x11\n\tphloPrice\x18\x07 \x01(\x03\x12\x11\n\tphloLimit\x18\x08 \x01(\x03\x12\x1d\n\x15validAfterBlockNumber\x18\t \x01(\x03\x12\x0c\n\x04\x63ost\x18\n \x01(\x04\x12\x0f\n\x07\x65rrored\x18\x0b \x01(\x08\x12\x19\n\x11systemDeployError\x18\x0c \x01(\t\"\xd0\x03\n\x0eLightBlockInfo\x12\x11\n\tblockHash\x18\x01 \x01(\t\x12\x0e\n\x06sender\x18\x02 \x01(\t\x12\x0e\n\x06seqNum\x18\x03 \x01(\x03\x12\x0b\n\x03sig\x18\x04 \x01(\t\x12\x14\n\x0csigAlgorithm\x18\x05 \x01(\t\x12\x0f\n\x07shardId\x18\x06 \x01(\t\x12\x12\n\nextraBytes\x18\x07 \x01(\x0c\x12\x0f\n\x07version\x18\x08 \x01(\x03\x12\x11\n\ttimestamp\x18\t \x01(\x03\x12\x18\n\x10headerExtraBytes\x18\n \x01(\x0c\x12\x17\n\x0fparentsHashList\x18\x0b \x03(\t\x12\x13\n\x0b\x62lockNumber\x18\x0c \x01(\x03\x12\x14\n\x0cpreStateHash\x18\r \x01(\t\x12\x15\n\rpostStateHash\x18\x0e \x01(\t\x12\x16\n\x0e\x62odyExtraBytes\x18\x0f \x01(\x0c\x12\x1f\n\x05\x62onds\x18\x10 \x03(\x0b\x32\x10.casper.BondInfo\x12\x11\n\tblockSize\x18\x11 \x01(\t\x12\x13\n\x0b\x64\x65ployCount\x18\x12 \x01(\x05\x12\x16\n\x0e\x66\x61ultTolerance\x18\x13 \x01(\x02\x12\x31\n\x0ejustifications\x18\x14 \x03(\x0b\x32\x19.casper.JustificationInfo\"[\n\tBlockInfo\x12)\n\tblockInfo\x18\x01 \x01(\x0b\x32\x16.casper.LightBlockInfo\x12#\n\x07\x64\x65ploys\x18\x02 \x03(\x0b\x32\x12.casper.DeployInfo\"W\n\x11\x44\x61taWithBlockInfo\x12\x1b\n\rpostBlockData\x18\x01 \x03(\x0b\x32\x04.Par\x12%\n\x05\x62lock\x18\x02 \x01(\x0b\x32\x16.casper.LightBlockInfo\"\x84\x01\n\x1a\x43ontinuationsWithBlockInfo\x12?\n\x16postBlockContinuations\x18\x01 \x03(\x0b\x32\x1f.casper.WaitingContinuationInfo\x12%\n\x05\x62lock\x18\x02 \x01(\x0b\x32\x16.casper.LightBlockInfo\"g\n\x17WaitingContinuationInfo\x12\'\n\x11postBlockPatterns\x18\x01 \x03(\x0b\x32\x0c.BindPattern\x12#\n\x15postBlockContinuation\x18\x02 \x01(\x0b\x32\x04.Par\"d\n\x12ReportProduceProto\x12\x15\n\x07\x63hannel\x18\x01 \x01(\x0b\x32\x04.Par\x12 \n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x12.ListParWithRandom:\x15\xe2?\x12\n\x10ReportEventProto\"\x85\x01\n\x12ReportConsumeProto\x12\x16\n\x08\x63hannels\x18\x01 \x03(\x0b\x32\x04.Par\x12\x1e\n\x08patterns\x18\x02 \x03(\x0b\x32\x0c.BindPattern\x12 \n\x05peeks\x18\x04 \x03(\x0b\x32\x11.casper.PeekProto:\x15\xe2?\x12\n\x10ReportEventProto\"\x83\x01\n\x0fReportCommProto\x12+\n\x07\x63onsume\x18\x01 \x01(\x0b\x32\x1a.casper.ReportConsumeProto\x12,\n\x08produces\x18\x02 \x03(\x0b\x32\x1a.casper.ReportProduceProto:\x15\xe2?\x12\n\x10ReportEventProto\"\x9e\x01\n\x0bReportProto\x12-\n\x07produce\x18\x01 \x01(\x0b\x32\x1a.casper.ReportProduceProtoH\x00\x12-\n\x07\x63onsume\x18\x02 \x01(\x0b\x32\x1a.casper.ReportConsumeProtoH\x00\x12\'\n\x04\x63omm\x18\x03 \x01(\x0b\x32\x17.casper.ReportCommProtoH\x00\x42\x08\n\x06report\"3\n\x0cSingleReport\x12#\n\x06\x65vents\x18\x01 \x03(\x0b\x32\x13.casper.ReportProto\"g\n\x17\x44\x65ployInfoWithEventData\x12&\n\ndeployInfo\x18\x01 \x01(\x0b\x32\x12.casper.DeployInfo\x12$\n\x06report\x18\x02 \x03(\x0b\x32\x14.casper.SingleReport\"m\n\x0e\x42lockEventInfo\x12)\n\tblockInfo\x18\x01 \x01(\x0b\x32\x16.casper.LightBlockInfo\x12\x30\n\x07\x64\x65ploys\x18\x02 \x03(\x0b\x32\x1f.casper.DeployInfoWithEventDataBC\xe2?@\n\x1b\x63oop.rchain.casper.protocol\x10\x01\"\x1dsealed trait ReportEventProto(\x01\x62\x06proto3'
+  serialized_pb=b'\n\x19\x44\x65ployServiceCommon.proto\x12\x06\x63\x61sper\x1a\x13\x43\x61sperMessage.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x15scalapb/scalapb.proto\x1a\x0eRhoTypes.proto\"#\n\x0f\x46indDeployQuery\x12\x10\n\x08\x64\x65ployId\x18\x01 \x01(\x0c\"\x1a\n\nBlockQuery\x12\x0c\n\x04hash\x18\x01 \x01(\t\"\x1c\n\x0b\x42locksQuery\x12\r\n\x05\x64\x65pth\x18\x01 \x01(\x05\"G\n\x13\x42locksQueryByHeight\x12\x18\n\x10startBlockNumber\x18\x01 \x01(\x03\x12\x16\n\x0e\x65ndBlockNumber\x18\x02 \x01(\x03\"4\n\x0f\x44\x61taAtNameQuery\x12\r\n\x05\x64\x65pth\x18\x01 \x01(\x05\x12\x12\n\x04name\x18\x02 \x01(\x0b\x32\x04.Par\"=\n\x17\x43ontinuationAtNameQuery\x12\r\n\x05\x64\x65pth\x18\x01 \x01(\x05\x12\x13\n\x05names\x18\x02 \x03(\x0b\x32\x04.Par\"\\\n\x11VisualizeDagQuery\x12\r\n\x05\x64\x65pth\x18\x01 \x01(\x05\x12\x1e\n\x16showJustificationLines\x18\x02 \x01(\x08\x12\x18\n\x10startBlockNumber\x18\x03 \x01(\x05\"\x14\n\x12MachineVerifyQuery\"K\n\x17PrivateNamePreviewQuery\x12\x0c\n\x04user\x18\x01 \x01(\x0c\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x0f\n\x07nameQty\x18\x03 \x01(\x05\"\x19\n\x17LastFinalizedBlockQuery\" \n\x10IsFinalizedQuery\x12\x0c\n\x04hash\x18\x01 \x01(\t\"$\n\x0f\x42ondStatusQuery\x12\x11\n\tpublicKey\x18\x01 \x01(\x0c\"W\n\x12\x44\x61taAtChannelQuery\x12\x15\n\x07\x63hannel\x18\x01 \x01(\x0b\x32\x04.Par\x12\x11\n\tblockHash\x18\x02 \x01(\t\x12\x17\n\x0fusePreStateHash\x18\x03 \x01(\x08\"a\n\x1b\x43ontinuationAtChannelsQuery\x12\x16\n\x08\x63hannels\x18\x01 \x03(\x0b\x32\x04.Par\x12\x11\n\tblockHash\x18\x02 \x01(\t\x12\x17\n\x0fusePreStateHash\x18\x03 \x01(\x08\"R\n\x16\x45xploratoryDeployQuery\x12\x0c\n\x04term\x18\x01 \x01(\t\x12\x11\n\tblockHash\x18\x02 \x01(\t\x12\x17\n\x0fusePreStateHash\x18\x03 \x01(\x08\",\n\x08\x42ondInfo\x12\x11\n\tvalidator\x18\x01 \x01(\t\x12\r\n\x05stake\x18\x02 \x01(\x03\"?\n\x11JustificationInfo\x12\x11\n\tvalidator\x18\x01 \x01(\t\x12\x17\n\x0flatestBlockHash\x18\x02 \x01(\t\"\xe1\x01\n\nDeployInfo\x12\x10\n\x08\x64\x65ployer\x18\x01 \x01(\t\x12\x0c\n\x04term\x18\x02 \x01(\t\x12\x11\n\ttimestamp\x18\x03 \x01(\x03\x12\x0b\n\x03sig\x18\x04 \x01(\t\x12\x14\n\x0csigAlgorithm\x18\x05 \x01(\t\x12\x11\n\tphloPrice\x18\x07 \x01(\x03\x12\x11\n\tphloLimit\x18\x08 \x01(\x03\x12\x1d\n\x15validAfterBlockNumber\x18\t \x01(\x03\x12\x0c\n\x04\x63ost\x18\n \x01(\x04\x12\x0f\n\x07\x65rrored\x18\x0b \x01(\x08\x12\x19\n\x11systemDeployError\x18\x0c \x01(\t\"\xd0\x03\n\x0eLightBlockInfo\x12\x11\n\tblockHash\x18\x01 \x01(\t\x12\x0e\n\x06sender\x18\x02 \x01(\t\x12\x0e\n\x06seqNum\x18\x03 \x01(\x03\x12\x0b\n\x03sig\x18\x04 \x01(\t\x12\x14\n\x0csigAlgorithm\x18\x05 \x01(\t\x12\x0f\n\x07shardId\x18\x06 \x01(\t\x12\x12\n\nextraBytes\x18\x07 \x01(\x0c\x12\x0f\n\x07version\x18\x08 \x01(\x03\x12\x11\n\ttimestamp\x18\t \x01(\x03\x12\x18\n\x10headerExtraBytes\x18\n \x01(\x0c\x12\x17\n\x0fparentsHashList\x18\x0b \x03(\t\x12\x13\n\x0b\x62lockNumber\x18\x0c \x01(\x03\x12\x14\n\x0cpreStateHash\x18\r \x01(\t\x12\x15\n\rpostStateHash\x18\x0e \x01(\t\x12\x16\n\x0e\x62odyExtraBytes\x18\x0f \x01(\x0c\x12\x1f\n\x05\x62onds\x18\x10 \x03(\x0b\x32\x10.casper.BondInfo\x12\x11\n\tblockSize\x18\x11 \x01(\t\x12\x13\n\x0b\x64\x65ployCount\x18\x12 \x01(\x05\x12\x16\n\x0e\x66\x61ultTolerance\x18\x13 \x01(\x02\x12\x31\n\x0ejustifications\x18\x14 \x03(\x0b\x32\x19.casper.JustificationInfo\"[\n\tBlockInfo\x12)\n\tblockInfo\x18\x01 \x01(\x0b\x32\x16.casper.LightBlockInfo\x12#\n\x07\x64\x65ploys\x18\x02 \x03(\x0b\x32\x12.casper.DeployInfo\"W\n\x11\x44\x61taWithBlockInfo\x12\x1b\n\rpostBlockData\x18\x01 \x03(\x0b\x32\x04.Par\x12%\n\x05\x62lock\x18\x02 \x01(\x0b\x32\x16.casper.LightBlockInfo\"\x84\x01\n\x1a\x43ontinuationsWithBlockInfo\x12?\n\x16postBlockContinuations\x18\x01 \x03(\x0b\x32\x1f.casper.WaitingContinuationInfo\x12%\n\x05\x62lock\x18\x02 \x01(\x0b\x32\x16.casper.LightBlockInfo\"g\n\x17WaitingContinuationInfo\x12\'\n\x11postBlockPatterns\x18\x01 \x03(\x0b\x32\x0c.BindPattern\x12#\n\x15postBlockContinuation\x18\x02 \x01(\x0b\x32\x04.Par\"d\n\x12ReportProduceProto\x12\x15\n\x07\x63hannel\x18\x01 \x01(\x0b\x32\x04.Par\x12 \n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x12.ListParWithRandom:\x15\xe2?\x12\n\x10ReportEventProto\"\x85\x01\n\x12ReportConsumeProto\x12\x16\n\x08\x63hannels\x18\x01 \x03(\x0b\x32\x04.Par\x12\x1e\n\x08patterns\x18\x02 \x03(\x0b\x32\x0c.BindPattern\x12 \n\x05peeks\x18\x04 \x03(\x0b\x32\x11.casper.PeekProto:\x15\xe2?\x12\n\x10ReportEventProto\"\x83\x01\n\x0fReportCommProto\x12+\n\x07\x63onsume\x18\x01 \x01(\x0b\x32\x1a.casper.ReportConsumeProto\x12,\n\x08produces\x18\x02 \x03(\x0b\x32\x1a.casper.ReportProduceProto:\x15\xe2?\x12\n\x10ReportEventProto\"\x9e\x01\n\x0bReportProto\x12-\n\x07produce\x18\x01 \x01(\x0b\x32\x1a.casper.ReportProduceProtoH\x00\x12-\n\x07\x63onsume\x18\x02 \x01(\x0b\x32\x1a.casper.ReportConsumeProtoH\x00\x12\'\n\x04\x63omm\x18\x03 \x01(\x0b\x32\x17.casper.ReportCommProtoH\x00\x42\x08\n\x06report\"3\n\x0cSingleReport\x12#\n\x06\x65vents\x18\x01 \x03(\x0b\x32\x13.casper.ReportProto\"g\n\x17\x44\x65ployInfoWithEventData\x12&\n\ndeployInfo\x18\x01 \x01(\x0b\x32\x12.casper.DeployInfo\x12$\n\x06report\x18\x02 \x03(\x0b\x32\x14.casper.SingleReport\"m\n\x0e\x42lockEventInfo\x12)\n\tblockInfo\x18\x01 \x01(\x0b\x32\x16.casper.LightBlockInfo\x12\x30\n\x07\x64\x65ploys\x18\x02 \x03(\x0b\x32\x1f.casper.DeployInfoWithEventDataBC\xe2?@\n\x1b\x63oop.rchain.casper.protocol\x10\x01\"\x1dsealed trait ReportEventProto(\x01\x62\x06proto3'
   ,
   dependencies=[CasperMessage__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,scalapb_dot_scalapb__pb2.DESCRIPTOR,RhoTypes__pb2.DESCRIPTOR,])
 
@@ -436,6 +436,96 @@ _BONDSTATUSQUERY = _descriptor.Descriptor(
 )
 
 
+_DATAATCHANNELQUERY = _descriptor.Descriptor(
+  name='DataAtChannelQuery',
+  full_name='casper.DataAtChannelQuery',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='channel', full_name='casper.DataAtChannelQuery.channel', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='blockHash', full_name='casper.DataAtChannelQuery.blockHash', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='usePreStateHash', full_name='casper.DataAtChannelQuery.usePreStateHash', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=703,
+  serialized_end=790,
+)
+
+
+_CONTINUATIONATCHANNELSQUERY = _descriptor.Descriptor(
+  name='ContinuationAtChannelsQuery',
+  full_name='casper.ContinuationAtChannelsQuery',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='channels', full_name='casper.ContinuationAtChannelsQuery.channels', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='blockHash', full_name='casper.ContinuationAtChannelsQuery.blockHash', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='usePreStateHash', full_name='casper.ContinuationAtChannelsQuery.usePreStateHash', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=792,
+  serialized_end=889,
+)
+
+
 _EXPLORATORYDEPLOYQUERY = _descriptor.Descriptor(
   name='ExploratoryDeployQuery',
   full_name='casper.ExploratoryDeployQuery',
@@ -476,8 +566,8 @@ _EXPLORATORYDEPLOYQUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=703,
-  serialized_end=785,
+  serialized_start=891,
+  serialized_end=973,
 )
 
 
@@ -514,8 +604,8 @@ _BONDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=787,
-  serialized_end=831,
+  serialized_start=975,
+  serialized_end=1019,
 )
 
 
@@ -552,8 +642,8 @@ _JUSTIFICATIONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=833,
-  serialized_end=896,
+  serialized_start=1021,
+  serialized_end=1084,
 )
 
 
@@ -653,8 +743,8 @@ _DEPLOYINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=899,
-  serialized_end=1124,
+  serialized_start=1087,
+  serialized_end=1312,
 )
 
 
@@ -817,8 +907,8 @@ _LIGHTBLOCKINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1127,
-  serialized_end=1591,
+  serialized_start=1315,
+  serialized_end=1779,
 )
 
 
@@ -855,8 +945,8 @@ _BLOCKINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1593,
-  serialized_end=1684,
+  serialized_start=1781,
+  serialized_end=1872,
 )
 
 
@@ -893,8 +983,8 @@ _DATAWITHBLOCKINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1686,
-  serialized_end=1773,
+  serialized_start=1874,
+  serialized_end=1961,
 )
 
 
@@ -931,8 +1021,8 @@ _CONTINUATIONSWITHBLOCKINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1776,
-  serialized_end=1908,
+  serialized_start=1964,
+  serialized_end=2096,
 )
 
 
@@ -969,8 +1059,8 @@ _WAITINGCONTINUATIONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1910,
-  serialized_end=2013,
+  serialized_start=2098,
+  serialized_end=2201,
 )
 
 
@@ -1007,8 +1097,8 @@ _REPORTPRODUCEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2015,
-  serialized_end=2115,
+  serialized_start=2203,
+  serialized_end=2303,
 )
 
 
@@ -1052,8 +1142,8 @@ _REPORTCONSUMEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2118,
-  serialized_end=2251,
+  serialized_start=2306,
+  serialized_end=2439,
 )
 
 
@@ -1090,8 +1180,8 @@ _REPORTCOMMPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2254,
-  serialized_end=2385,
+  serialized_start=2442,
+  serialized_end=2573,
 )
 
 
@@ -1138,8 +1228,8 @@ _REPORTPROTO = _descriptor.Descriptor(
       name='report', full_name='casper.ReportProto.report',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=2388,
-  serialized_end=2546,
+  serialized_start=2576,
+  serialized_end=2734,
 )
 
 
@@ -1169,8 +1259,8 @@ _SINGLEREPORT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2548,
-  serialized_end=2599,
+  serialized_start=2736,
+  serialized_end=2787,
 )
 
 
@@ -1207,8 +1297,8 @@ _DEPLOYINFOWITHEVENTDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2601,
-  serialized_end=2704,
+  serialized_start=2789,
+  serialized_end=2892,
 )
 
 
@@ -1245,12 +1335,14 @@ _BLOCKEVENTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2706,
-  serialized_end=2815,
+  serialized_start=2894,
+  serialized_end=3003,
 )
 
 _DATAATNAMEQUERY.fields_by_name['name'].message_type = RhoTypes__pb2._PAR
 _CONTINUATIONATNAMEQUERY.fields_by_name['names'].message_type = RhoTypes__pb2._PAR
+_DATAATCHANNELQUERY.fields_by_name['channel'].message_type = RhoTypes__pb2._PAR
+_CONTINUATIONATCHANNELSQUERY.fields_by_name['channels'].message_type = RhoTypes__pb2._PAR
 _LIGHTBLOCKINFO.fields_by_name['bonds'].message_type = _BONDINFO
 _LIGHTBLOCKINFO.fields_by_name['justifications'].message_type = _JUSTIFICATIONINFO
 _BLOCKINFO.fields_by_name['blockInfo'].message_type = _LIGHTBLOCKINFO
@@ -1297,6 +1389,8 @@ DESCRIPTOR.message_types_by_name['PrivateNamePreviewQuery'] = _PRIVATENAMEPREVIE
 DESCRIPTOR.message_types_by_name['LastFinalizedBlockQuery'] = _LASTFINALIZEDBLOCKQUERY
 DESCRIPTOR.message_types_by_name['IsFinalizedQuery'] = _ISFINALIZEDQUERY
 DESCRIPTOR.message_types_by_name['BondStatusQuery'] = _BONDSTATUSQUERY
+DESCRIPTOR.message_types_by_name['DataAtChannelQuery'] = _DATAATCHANNELQUERY
+DESCRIPTOR.message_types_by_name['ContinuationAtChannelsQuery'] = _CONTINUATIONATCHANNELSQUERY
 DESCRIPTOR.message_types_by_name['ExploratoryDeployQuery'] = _EXPLORATORYDEPLOYQUERY
 DESCRIPTOR.message_types_by_name['BondInfo'] = _BONDINFO
 DESCRIPTOR.message_types_by_name['JustificationInfo'] = _JUSTIFICATIONINFO
@@ -1398,6 +1492,20 @@ BondStatusQuery = _reflection.GeneratedProtocolMessageType('BondStatusQuery', (_
   # @@protoc_insertion_point(class_scope:casper.BondStatusQuery)
   })
 _sym_db.RegisterMessage(BondStatusQuery)
+
+DataAtChannelQuery = _reflection.GeneratedProtocolMessageType('DataAtChannelQuery', (_message.Message,), {
+  'DESCRIPTOR' : _DATAATCHANNELQUERY,
+  '__module__' : 'DeployServiceCommon_pb2'
+  # @@protoc_insertion_point(class_scope:casper.DataAtChannelQuery)
+  })
+_sym_db.RegisterMessage(DataAtChannelQuery)
+
+ContinuationAtChannelsQuery = _reflection.GeneratedProtocolMessageType('ContinuationAtChannelsQuery', (_message.Message,), {
+  'DESCRIPTOR' : _CONTINUATIONATCHANNELSQUERY,
+  '__module__' : 'DeployServiceCommon_pb2'
+  # @@protoc_insertion_point(class_scope:casper.ContinuationAtChannelsQuery)
+  })
+_sym_db.RegisterMessage(ContinuationAtChannelsQuery)
 
 ExploratoryDeployQuery = _reflection.GeneratedProtocolMessageType('ExploratoryDeployQuery', (_message.Message,), {
   'DESCRIPTOR' : _EXPLORATORYDEPLOYQUERY,

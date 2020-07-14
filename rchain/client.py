@@ -12,7 +12,7 @@ from .pb.DeployServiceCommon_pb2 import (
     BlockInfo, BlockQuery, BlocksQuery, BlocksQueryByHeight,
     ContinuationAtNameQuery, DataAtNameQuery, ExploratoryDeployQuery,
     FindDeployQuery, IsFinalizedQuery, LastFinalizedBlockQuery, LightBlockInfo,
-    SingleReport, VisualizeDagQuery,
+    SingleReport, VisualizeDagQuery, DataAtChannelQuery, ContinuationAtChannelsQuery
 )
 from .pb.DeployServiceV1_pb2 import (
     BlockInfoResponse, BlockResponse, ContinuationAtNameResponse,
@@ -176,6 +176,18 @@ class RClient:
         match_result = propose_result_match.match(response.result)
         assert match_result is not None
         return match_result.group("block_hash")
+
+    def get_data_at_channel(self, par: Par, block_hash: str, usePreStateHash: bool=False):
+        query = DataAtChannelQuery(channel=par, blockHash=block_hash, usePreStateHash=usePreStateHash)
+        response = self._deploy_stub.getDataAtChannel(query)
+        self._check_response(response)
+        return response.result
+
+    def get_continuation_at_channel(self, pars: List[Par], block_hash: str, usePreStateHash: bool=False):
+        query = ContinuationAtChannelsQuery(channels=pars, blockHash=block_hash, usePreStateHash=usePreStateHash)
+        response = self._deploy_stub.getContinuationAtChannel(query)
+        self._check_response(response)
+        return response.result
 
     def get_data_at_name(self, par: Par, depth: int = -1) -> Data:
         query = DataAtNameQuery(depth=depth, name=par)
