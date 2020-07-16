@@ -30,6 +30,11 @@ message BlockQuery {
   string hash = 1;
 }
 
+message ReportQuery{
+  string hash = 1;
+  bool forceReplay = 2;
+}
+
 message BlocksQuery {
   int32 depth = 1;
 }
@@ -98,11 +103,6 @@ message BondInfo{
   int64  stake = 2;
 }
 
-message JustificationInfo{
-  string validator = 1;
-  string latestBlockHash = 2;
-}
-
 message DeployInfo{
   string deployer     = 1;
   string term         = 2;
@@ -144,8 +144,6 @@ message LightBlockInfo {
   string blockSize = 17;
   int32 deployCount = 18;
   float faultTolerance = 19;
-
-  repeated JustificationInfo justifications = 20;
 }
 
 // For node clients, see BlockMessage for actual Casper protocol Block representation
@@ -211,7 +209,14 @@ message DeployInfoWithEventData{
   repeated SingleReport report =2;
 }
 
+message SystemDeployInfoWithEventData{
+  SystemDeployDataProto systemDeploy = 1;
+  repeated SingleReport report =2;
+}
+
 message BlockEventInfo{
   LightBlockInfo blockInfo = 1;
   repeated DeployInfoWithEventData deploys= 2;
+  repeated SystemDeployInfoWithEventData systemDeploys = 3;
+  bytes postStateHash = 4;
 }

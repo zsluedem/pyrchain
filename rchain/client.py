@@ -12,7 +12,8 @@ from .pb.DeployServiceCommon_pb2 import (
     BlockInfo, BlockQuery, BlocksQuery, BlocksQueryByHeight,
     ContinuationAtNameQuery, DataAtNameQuery, ExploratoryDeployQuery,
     FindDeployQuery, IsFinalizedQuery, LastFinalizedBlockQuery, LightBlockInfo,
-    SingleReport, VisualizeDagQuery, DataAtChannelQuery, ContinuationAtChannelsQuery
+    SingleReport, VisualizeDagQuery, DataAtChannelQuery, ContinuationAtChannelsQuery,
+    ReportQuery
 )
 from .pb.DeployServiceV1_pb2 import (
     BlockInfoResponse, BlockResponse, ContinuationAtNameResponse,
@@ -215,7 +216,7 @@ class RClient:
         return response
 
     def get_event_data(self, block_hash: str) -> EventInfoResponse:
-        query = BlockQuery(hash=block_hash)
+        query = ReportQuery(hash=block_hash)
         response = self._deploy_stub.getEventByHash(query)
         self._check_response(response)
         return response

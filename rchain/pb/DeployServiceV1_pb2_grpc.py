@@ -97,7 +97,7 @@ class DeployServiceStub(object):
         )
     self.getEventByHash = channel.unary_unary(
         '/casper.v1.DeployService/getEventByHash',
-        request_serializer=DeployServiceCommon__pb2.BlockQuery.SerializeToString,
+        request_serializer=DeployServiceCommon__pb2.ReportQuery.SerializeToString,
         response_deserializer=DeployServiceV1__pb2.EventInfoResponse.FromString,
         )
     self.getDataAtChannel = channel.unary_unary(
@@ -327,7 +327,7 @@ def add_DeployServiceServicer_to_server(servicer, server):
       ),
       'getEventByHash': grpc.unary_unary_rpc_method_handler(
           servicer.getEventByHash,
-          request_deserializer=DeployServiceCommon__pb2.BlockQuery.FromString,
+          request_deserializer=DeployServiceCommon__pb2.ReportQuery.FromString,
           response_serializer=DeployServiceV1__pb2.EventInfoResponse.SerializeToString,
       ),
       'getDataAtChannel': grpc.unary_unary_rpc_method_handler(
